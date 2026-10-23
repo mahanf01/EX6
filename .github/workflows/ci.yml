@@ -24,3 +24,11 @@ jobs:
         
       - name: Run tests
         run: npm test
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-cd-kata
+          path: |
+            app.js
+            package.json
